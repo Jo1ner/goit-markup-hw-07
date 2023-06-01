@@ -1,23 +1,15 @@
-/* колір основного тексту SLATE  #434455;
-колір вторинного тексту NAVYBLUE  #2E2F42;
+/*SLATE  #434455;
+NAVYBLUE  #2E2F42;
 Primary Brand IRIS  #4D5AE5;
-hover #404BBF
+Hover #404BBF
 CLOUD #F4F4FD
 H1  #FFFFFF
-LIGHT SLATE  color: #8e8f99; */
+LIGHT SLATE #8e8f99; */
 
 * body {
   color: #434455;
   font-family: 'Roboto', sans-serif;
   background-color: #ffffff;
-}
-
-.container {
-  width: 1158px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 :root {
@@ -65,15 +57,49 @@ img {
   display: block;
 }
 
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media screen and (min-width: 428px) {
+  .container {
+    width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* 
+
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
-}
+} */
 
 /* INDEX.HTML */
 
 /* =================== HEADER =================== */
-.page-header {
+
+.mobile-menu-open-btn-icon {
+  stroke: var(--secondary-text-color);
+}
+
+/* .page-header {
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid #e7e9fc;
@@ -174,7 +200,7 @@ img {
 .contact-link:hover,
 .contact-link:focus {
   color: var(--hover-color);
-}
+} */
 /* ================= MAIN ================*/
 
 .hero {
