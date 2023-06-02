@@ -95,13 +95,38 @@ img {
 
 /* =================== HEADER =================== */
 
-.mobile-menu-open-btn-icon {
-  stroke: var(--secondary-text-color);
+/* Phone styles only */
+
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+
+  .menu-link-border-line::after {
+    display: none;
+  }
+
+  .contact {
+    display: none;
+  }
+
+  .mobile-menu-open-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+  }
+
+  .mobile-menu-open-btn-icon {
+    stroke: var(--secondary-text-color);
+  }
 }
 
-/* .page-header {
+/* Phone styles */
+
+.page-header {
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 22px;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -109,17 +134,11 @@ img {
 
 .page-header-container {
   display: flex;
-  align-items: center;
-}
-
-.page-nav {
-  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  margin-right: 76px;
-
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -129,78 +148,112 @@ img {
   color: var(--accent-color);
 }
 
-.logo-accent {
-  color: var(--accent-color);
-}
-
 .logo-dark-theme {
   color: #2e2f42;
 }
 
-.menu-link-border-line::after {
-  display: block;
-  content: '';
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--hover-color);
+/* Tablet styles */
 
-  position: absolute;
-  bottom: -1px;
+@media screen and (min-width: 768px) {
+  .mobile-menu-open-btn {
+    display: none;
+  }
+
+  .page-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    margin-right: 120px;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .menu-link {
+    position: relative;
+    padding: 24px 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-link:hover,
+  .menu-link:focus {
+    color: var(--hover-color);
+  }
+
+  .menu-link-border-line::after {
+    position: absolute;
+    bottom: -1px;
+
+    display: block;
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--hover-color);
+  }
+
+  .active-link {
+    color: var(--hover-color);
+  }
+
+  .contact {
+    font-style: normal;
+    margin-left: auto;
+  }
+
+  .contact-link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--primary-text-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .contact-link:hover,
+  .contact-link:focus {
+    color: var(--hover-color);
+  }
 }
 
-.menu-link {
-  position: relative;
-  padding: 24px 0;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+@media screen and (max-width: 1157px) {
+  .contact-list .contact-item + .contact-item {
+    margin-top: 12px;
+  }
 }
 
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+/* Desktop styles */
+
+@media screen and (min-width: 1158px) {
+  .logo {
+    margin-right: 76px;
+  }
+
+  .contact-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 0;
+  }
+
+  .contact-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
 }
 
-.active-link {
-  color: var(--hover-color);
-}
-
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--hover-color);
-}
-
-.contact {
-  font-style: normal;
-  margin-left: auto;
-}
-
-.contact-list {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.contact-link {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contact-link:hover,
-.contact-link:focus {
-  color: var(--hover-color);
-} */
 /* ================= MAIN ================*/
 
 .hero {
