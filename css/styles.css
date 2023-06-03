@@ -353,7 +353,7 @@ img {
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/hero/people-office-desktop.jpg);
-    max-width: 1140px;
+    max-width: 1440px;
     padding-top: 188px;
     padding-bottom: 188px;
   }
@@ -370,15 +370,32 @@ img {
   }
 }
 
-/* ===/ Section hero === */
+/* === /Section hero === */
 
 /* === Section benefits === */
 
 /* Phone styles only */
 
 @media screen and (max-width: 1157px) {
+  .section,
+  .section-benefits {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
   .benefits-icon {
     display: none;
+  }
+
+  .benefits-subtitle {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-transform: capitalize;
+  }
+
+  .benefits-desc {
+    font-weight: 500;
   }
 }
 
@@ -394,26 +411,14 @@ img {
 
 /* Phone styles */
 
-.section,
-.section-benefits {
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-
 .benefits-subtitle {
   margin-bottom: 8px;
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
   letter-spacing: 0.02em;
-  text-transform: capitalize;
   color: var(--secondary-text-color);
 }
 
 .benefits-desc {
   text-align: left;
-  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -437,71 +442,108 @@ img {
   }
 
   .benefits-list-item {
-    width: calc((100%-24px) / 2);
+    width: calc((100% - 24px) / 2);
   }
 }
-/* 
-.section-benefits-list {
-  display: flex;
-  gap: 24px;
-}
-.benefits-list-item {
-  width: calc((100% - 72px) / 4);
+
+/* Desktop styles */
+
+@media screen and (min-width: 1158px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .section-benefits {
+    padding-top: 120px;
+  }
+
+  .section-benefits-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .benefits-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .benefits-desc {
+    font-weight: 400;
+  }
+
+  .benefits-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .benefits-list-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    margin-bottom: 8px;
+
+    background-color: var(--light-mode);
+    border-radius: 4px;
+  }
+
+  .benefits-icon {
+    fill: var(--secondary-text-color);
+  }
 }
 
-.benefits-icon {
-  fill: var(--secondary-text-color);
+/* === /Section benefits === */
+
+/* === Section our-advantages === */
+
+/* Phone styles only */
+
+@media screen and (max-width: 1157px) {
+  .our-advantages {
+    display: none;
+  }
 }
 
-.benefits-list-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 112px;
-  margin-bottom: 8px;
-
-  background-color: var(--light-mode);
-  border-radius: 4px;
-}
-
-.benefits-subtitle {
-  margin-bottom: 8px;
-
-  text-align: left;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
-}
-
-.benefits-desc {
-  text-align: left;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-}
-
-.employees-list {
-  display: flex;
-  gap: 24px;
-}
+/* Desktop styles */
 
 .heading-section {
   margin-bottom: 72px;
 
   font-size: 36px;
-  line-height: 1.1;
+  line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--secondary-text-color);
 }
 
-.section-list {
-  display: flex;
-  gap: 24px;
+@media screen and (min-width: 1158px) {
+  .section-list {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+/* === /Section our-advantages === */
+
+/* Section cards */
+
+/* Phone styles */
+
+.section-cards {
+  background-color: var(--light-mode);
+}
+
+.section-cards-item {
+  width: 264px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 72px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--white-color);
 }
 
 .employees-list-text {
@@ -526,19 +568,6 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
-}
-
-.section-cards {
-  background-color: var(--light-mode);
-}
-
-.section-cards-item {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px;
-  flex-basis: calc((100%-72px) / 4);
-
-  background-color: var(--white-color);
 }
 
 .social-networks {
@@ -575,12 +604,34 @@ img {
   fill: currentColor;
 }
 
-.company-section {
-  display: flex;
-  gap: 24px;
+@media screen and (min-width: 768px) and (max-width: 1158px) {
+  .employees-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+
+  .section-cards-item {
+    width: calc((100% - 208px) / 2);
+    margin: 0;
+  }
 }
 
-.company-list-link {
+@media screen and (min-width: 1158px) {
+  .employees-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .section-cards-item {
+    width: calc((100% - 72px) / 4);
+    margin-bottom: 0;
+  }
+}
+
+/* .company-list-link {
   display: flex;
   justify-content: center;
   align-items: center;
