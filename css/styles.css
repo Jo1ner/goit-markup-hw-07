@@ -386,6 +386,10 @@ img {
   .benefits-list-item:not(:last-child) {
     margin-bottom: 72px;
   }
+
+  .benefits-subtitle {
+    text-align: center;
+  }
 }
 
 /* Phone styles */
@@ -399,7 +403,6 @@ img {
 .benefits-subtitle {
   margin-bottom: 8px;
 
-  text-align: center;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -419,6 +422,12 @@ img {
 
 /* Tablet styles */
 
+@media screen (min-width: 768px) {
+  .benefits-subtitle {
+    text-align: left;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .section-benefits-list {
     display: flex;
@@ -429,10 +438,6 @@ img {
 
   .benefits-list-item {
     width: calc((100%-24px) / 2);
-  }
-
-  .benefits-subtitle {
-    text-align: left;
   }
 }
 /* 
