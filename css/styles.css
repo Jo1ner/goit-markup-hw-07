@@ -434,6 +434,11 @@ img {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
+  .section {
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+
   .section-benefits-list {
     display: flex;
     flex-wrap: wrap;
@@ -695,7 +700,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .company-list {
-    width: calc((100% - 48px) / 3);
+    width: calc((100% - 232px) / 3);
   }
 }
 
@@ -712,6 +717,8 @@ img {
     justify-content: center;
   }
 }
+
+/* ================= / MAIN ================*/
 
 /* ======================= FOOTER ==================== */
 
@@ -839,6 +846,8 @@ footer .social-networks-link:focus {
   .footer-container {
     column-gap: 24px;
     justify-content: flex-start;
+    padding-left: 108px;
+    padding-right: 108px;
   }
 }
 
@@ -870,6 +879,9 @@ footer .social-networks-link:focus {
   .footer-form-container {
     margin-left: 80px;
   }
+  .footer-form-input {
+    opacity: 1;
+  }
 
   .page-footer {
     padding-top: 100px;
@@ -879,6 +891,8 @@ footer .social-networks-link:focus {
     margin-left: 120px;
   }
 }
+
+/* ======================= / FOOTER ==================== */
 
 /* ==================  PORTFOLIO.HTML ================= */
 
@@ -1012,7 +1026,9 @@ footer .social-networks-link:focus {
   transform: translateY(0%);
 }
 
-/* =========================BACKDROP and MODAL====================== */
+/* ================== / PORTFOLIO.HTML ================= */
+
+/* ================  BACKDROP and MODAL =============== */
 
 .backdrop {
   position: fixed;
@@ -1210,3 +1226,5 @@ footer .social-networks-link:focus {
   fill: var(--white-color);
   border-color: var(--hover-color);
 }
+
+/* ================ / BACKDROP and MODAL =============== */
