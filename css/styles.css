@@ -336,6 +336,15 @@ img {
   margin-bottom: 48px;
 }
 
+.mobile-social-networks {
+  display: flex;
+  gap: 56px;
+}
+
+.mobile-active-link {
+  color: var(--hover-color);
+}
+
 /* =================== / HEADER =================== */
 
 /* ================= MAIN ================*/
@@ -518,17 +527,17 @@ img {
   .benefits-subtitle {
     text-align: left;
   }
-}
 
-.section-benefits-list {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 72px;
-  column-gap: 24px;
-}
+  .section-benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
 
-.benefits-list-item {
-  width: calc((100% - 24px) / 2);
+  .benefits-list-item {
+    width: calc((100% - 24px) / 2);
+  }
 }
 
 /* Desktop styles */
